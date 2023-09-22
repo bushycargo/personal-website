@@ -5,10 +5,10 @@ a{
     text-decoration: none;
 }
 h1{
-    font-size: 40px;
+    font-size: 5vmin;
 }
 h2{
-    font-size: 30px;
+    font-size: 4vmin;
 }
 #container{
     display: grid;
@@ -24,6 +24,7 @@ h2{
 }
 #name-header{
     font-weight: 700;
+    color: #be9afc;
 }
 .text{
     color: #fff;
