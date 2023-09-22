@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function (){
     let hiddenAttr = document.getElementById("form").attributes.getNamedItem("hidden");
 
     let nameScreenContent = `
-        <header class="text js-h-text">Main Screen</header>
-        <p class="text js-p-text">Test p</p>
+        <header class="text js-h-text">Under Construction</header>
+        <p class="text js-p-text">Test</p>
     `;
-    let contactContact = `<p class="text js-h-text">Contact Me</p>`;
+    let contactContact = `<header class="text js-h-text">Contact Me</header>`;
     let aboutMeContent = `<p class="text js-p-text">About me or something</p>`;
     contentBox.innerHTML = nameScreenContent;
 
