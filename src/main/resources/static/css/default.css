@@ -1,0 +1,32 @@
+html{
+    background-color: #222;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+}
+#container{
+    display: grid;
+    height: 95vh;
+    grid-template-columns: 25% 75%;
+}
+.grid-item{
+    padding-top: 10%;
+}
+#side-buttons{
+    text-align: left;
+    padding-left: 20%;
+}
+#name-header{
+    font-weight: 700;
+}
+.text{
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+}

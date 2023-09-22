@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Josep Haines</title>
+    <link rel="stylesheet" th:href="@{/css/default.css}"/>
 </head>
-<body>
-
+<body id="container">
+    <div class="grid-item" id="side-buttons">
+        <a href="" onclick="reload()"><h1 class="text" id="name-header">Josep Haines</h1></a>
+        <h2 class="text">About Me</h2>
+        <h2 class="text">Contact</h2>
+    </div>
+    <div class="grid-item" id="content-box">
+    </div>
+    <script th:src="@{/ts/index.js}" type="module"></script>
 </body>
 </html>
