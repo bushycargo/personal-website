@@ -39,4 +39,11 @@ document.addEventListener('DOMContentLoaded', function (){
         event.target.style.color = "";
     });
 
+    // If form submit button hovered
+    document.getElementById("submit-button").addEventListener('mouseenter', function (event) {
+        event.target.style.backgroundColor = "#be9afc";
+    });
+    document.getElementById("submit-button").addEventListener('mouseout', function (event) {
+        event.target.style.backgroundColor = "";
+    });
 });

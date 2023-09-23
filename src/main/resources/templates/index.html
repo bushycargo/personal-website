@@ -6,6 +6,7 @@
     <title>Josep Haines</title>
     <link rel="stylesheet" th:href="@{/css/default.css}"/>
     <link rel="stylesheet" th:href="@{css/js-content.css}"/>
+    <link rel="stylesheet" th:href="@{css/form.css}">
     <script type="text/javascript" th:src="@{/js/index.js}"></script>
 </head>
 <body id="container">
@@ -18,10 +19,13 @@
         <noscript><p style="color: #ffffff; text-align: center">You do not have Javascript enabled. It is required for this website to work correctly.</p></noscript>
         <div id="content"></div>
         <form hidden id="form" th:action="@{/form}" th:object="${form}" method="post">
-            <p class="text">Name: <input type="text" th:field="*{name}"></p>
-            <p class="text">Email: <input type="text" th:field="*{email}"></p>
-            <p class="text">Message: <input type="text" th:field="*{message}"></p>
-            <input type="submit" th:value="Submit">
+            <p class="text form-text">Name:</p>
+            <input type="text" class="form-1l-field" th:field="*{name}">
+            <p class="text form-text">Email:</p>
+            <input type="text" class="form-1l-field" th:field="*{email}">
+            <p class="text form-text">Message:</p>
+            <textarea class="form-ml-field" th:field="*{message}"></textarea><br>
+            <input id="submit-button" type="submit" th:value="Submit">
         </form>
     </div>
 </body>
