@@ -20,11 +20,11 @@
         <div id="content"></div>
         <form hidden id="form" th:action="@{/form}" th:object="${form}" method="post">
             <p class="text form-text">Name:</p>
-            <input type="text" class="form-1l-field" th:field="*{name}">
+            <input required type="text" class="form-1l-field" th:field="*{name}">
             <p class="text form-text">Email:</p>
-            <input type="text" class="form-1l-field" th:field="*{email}">
+            <input required type="text" class="form-1l-field" th:field="*{email}">
             <p class="text form-text">Message:</p>
-            <textarea class="form-ml-field" th:field="*{message}"></textarea><br>
+            <textarea required class="form-ml-field" th:field="*{message}"></textarea><br>
             <input id="submit-button" type="submit" th:value="Submit">
         </form>
     </div>
