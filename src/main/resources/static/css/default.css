@@ -16,7 +16,7 @@ h2{
     grid-template-columns: 25% 75%;
 }
 .grid-item{
-    padding-top: 10%;
+    padding-top: 10vh;
 }
 #side-buttons{
     text-align: left;
@@ -25,6 +25,7 @@ h2{
 #name-header{
     font-weight: 700;
     color: #be9afc;
+    margin-top: 0;
 }
 .text{
     color: #fff;

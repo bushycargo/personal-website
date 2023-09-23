@@ -1,24 +1,27 @@
 document.addEventListener('DOMContentLoaded', function (){
-    let contentBox = document.getElementById("content-box");
+    let contentBox = document.getElementById("content");
+    let hiddenAttr = document.getElementById("form").attributes.getNamedItem("hidden");
 
     let nameScreenContent = `
-        <header class="text js-h-text">Main Screen</header>
-        <p class="text js-p-text">Test p</p>
+        <header class="text js-h-text">Under Construction</header>
+        <p class="text js-p-text">Test</p>
     `;
+    let contactContact = `<header class="text js-h-text">Contact Me</header>`;
     let aboutMeContent = `<p class="text js-p-text">About me or something</p>`;
-    let contactContent = `<p class="text js-p-text">Contact me brrrr</p>`;
-
     contentBox.innerHTML = nameScreenContent;
 
     // If buttons clicked
     document.getElementById("name-header").addEventListener('click', function (event) {
+        document.getElementById("form").attributes.setNamedItem(hiddenAttr);
         contentBox.innerHTML = nameScreenContent;
     });
     document.getElementById("about-me-header").addEventListener('click', function (event) {
+        document.getElementById("form").attributes.setNamedItem(hiddenAttr);
         contentBox.innerHTML = aboutMeContent;
     });
     document.getElementById("contact-header").addEventListener('click', function (event) {
-        contentBox.innerHTML = contactContent;
+        document.getElementById("form").attributes.removeNamedItem("hidden");
+        contentBox.innerHTML = contactContact;
     });
 
     // If buttons hovered
@@ -36,4 +39,11 @@ document.addEventListener('DOMContentLoaded', function (){
         event.target.style.color = "";
     });
 
+    // If form submit button hovered
+    document.getElementById("submit-button").addEventListener('mouseenter', function (event) {
+        event.target.style.backgroundColor = "#be9afc";
+    });
+    document.getElementById("submit-button").addEventListener('mouseout', function (event) {
+        event.target.style.backgroundColor = "";
+    });
 });

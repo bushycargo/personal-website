@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:form="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Josep Haines</title>
     <link rel="stylesheet" th:href="@{/css/default.css}"/>
     <link rel="stylesheet" th:href="@{css/js-content.css}"/>
+    <link rel="stylesheet" th:href="@{css/form.css}">
     <script type="text/javascript" th:src="@{/js/index.js}"></script>
 </head>
 <body id="container">
@@ -15,7 +17,16 @@
     </div>
     <div class="grid-item" id="content-box">
         <noscript><p style="color: #ffffff; text-align: center">You do not have Javascript enabled. It is required for this website to work correctly.</p></noscript>
-<!--        Content here gets filled from index.js-->
+        <div id="content"></div>
+        <form hidden id="form" th:action="@{/form}" th:object="${form}" method="post">
+            <p class="text form-text">Name:</p>
+            <input type="text" class="form-1l-field" th:field="*{name}">
+            <p class="text form-text">Email:</p>
+            <input type="text" class="form-1l-field" th:field="*{email}">
+            <p class="text form-text">Message:</p>
+            <textarea class="form-ml-field" th:field="*{message}"></textarea><br>
+            <input id="submit-button" type="submit" th:value="Submit">
+        </form>
     </div>
 </body>
 </html>
