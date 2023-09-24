@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function (){
         <header class="text js-h-text">Under Construction</header>
         <p class="text js-p-text">Test</p>
     `;
-    let contactContact = `<header class="text js-h-text">Contact Me</header>`;
+    let contactContent = `<header class="text js-h-text">Contact Me</header>`;
     let aboutMeContent = `
         <header class="text js-h-text">About Me</header>
         <p class="text js-p-text">
@@ -28,16 +28,29 @@ document.addEventListener('DOMContentLoaded', function (){
 
     // If buttons clicked
     document.getElementById("name-header").addEventListener('click', function (event) {
-        document.getElementById("form").attributes.setNamedItem(hiddenAttr);
-        contentBox.innerHTML = nameScreenContent;
+        if (contentBox.innerHTML === nameScreenContent) return;
+        $("form").fadeOut(200);
+        $("#content").fadeOut(200, function (){
+            contentBox.innerHTML = nameScreenContent;
+            $("#content").fadeIn(200);
+        });
     });
     document.getElementById("about-me-header").addEventListener('click', function (event) {
-        document.getElementById("form").attributes.setNamedItem(hiddenAttr);
-        contentBox.innerHTML = aboutMeContent;
+        if (contentBox.innerHTML === aboutMeContent) return;
+        $("form").fadeOut(200);
+        $("#content").fadeOut(200, function (){
+            contentBox.innerHTML = aboutMeContent;
+            $("#content").fadeIn(200);
+        });
     });
     document.getElementById("contact-header").addEventListener('click', function (event) {
-        document.getElementById("form").attributes.removeNamedItem("hidden");
-        contentBox.innerHTML = contactContact;
+        if (contentBox.innerHTML === contactContent) return;
+        $("form").fadeOut(200);
+        $("#content").fadeOut(200, function (){
+            $("form").fadeIn(200);
+            contentBox.innerHTML = contactContent;
+            $("#content").fadeIn(200);
+        });
     });
 
     // If buttons hovered
