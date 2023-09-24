@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Josep Haines</title>
-    <link rel="stylesheet" th:href="@{/css/index.css}"/>
+    <link rel="stylesheet" th:href="@{css/index.css}"/>
     <link rel="stylesheet" th:href="@{css/js-content.css}"/>
     <link rel="stylesheet" th:href="@{css/form.css}">
+    <link rel="stylesheet" th:href="@{css/content-grid.css}">
     <script type="text/javascript" th:src="@{/js/index.js}"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
@@ -19,6 +20,38 @@
     <div class="grid-item" id="content-box">
         <noscript><p style="color: #ffffff; text-align: center">You do not have Javascript enabled. It is required for this website to work correctly.</p></noscript>
         <div id="content"></div>
+
+        <div id="content-grid">
+            <div id="tl-box" class="grid-box">
+                <div class="tiled-box">
+                    <div class="tiled-box-content">
+                        <p>foo</p>
+                    </div>
+                </div>
+            </div>
+            <div id="tr-box" class="grid-box">
+                <div class="tiled-box">
+                    <div class="tiled-box-content">
+                        <p>foo</p>
+                    </div>
+                </div>
+            </div>
+            <div id="bl-box" class="grid-box">
+                <div class="tiled-box">
+                    <div class="tiled-box-content">
+                        <p>foo</p>
+                    </div>
+                </div>
+            </div>
+            <div id="br-box" class="grid-box">
+                <div class="tiled-box">
+                    <div class="tiled-box-content">
+                        <p>foo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <form hidden id="form" th:action="@{/form}" th:object="${form}" method="post">
             <p class="text form-text">Name:</p>
             <input required type="text" class="form-1l-field" th:field="*{name}">

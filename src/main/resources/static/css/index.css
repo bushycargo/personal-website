@@ -17,6 +17,7 @@ h2{
 }
 .grid-item{
     padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 #side-buttons{
     text-align: left;
