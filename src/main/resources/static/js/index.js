@@ -67,19 +67,18 @@ function setSidebarListener(elementId, content, form = false){
 }
 
 function setHoverListener(elementId, isButton = false){
-    if (isButton){
-        document.getElementById(elementId).addEventListener('mouseenter', function (event) {
-            event.target.style.backgroundColor = "#be9afc";
-        });
-        document.getElementById(elementId).addEventListener('mouseout', function (event) {
-            event.target.style.backgroundColor = "";
-        });
-        return;
-    }
     document.getElementById(elementId).addEventListener("mouseenter", function (event) {
+        if (isButton){
+            event.target.style.backgroundColor = "#be9afc";
+            return;
+        }
         event.target.style.color = "#be9afc";
     });
     document.getElementById(elementId).addEventListener('mouseout', function (event) {
+        if (isButton){
+            event.target.style.backgroundColor = "";
+            return;
+        }
         event.target.style.color = "";
     });
 }
