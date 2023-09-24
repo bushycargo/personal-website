@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function (){
     contentBox.innerHTML = nameScreenContent;
 
     // If buttons clicked
-    setSidebarListener("name-header", nameScreenContent);
+    setSidebarListener("name-header", nameScreenContent, false, true);
     setSidebarListener("about-me-header", aboutMeContent);
     setSidebarListener("contact-header", contactContent, true);
 
@@ -50,16 +50,20 @@ function age(){
     return age;
 }
 
-function setSidebarListener(elementId, content, form = false){
+function setSidebarListener(elementId, content, isForm = false, isHome = false){
     let contentBox = document.getElementById("content");
     document.getElementById(elementId).addEventListener('click', function (event) {
         if (contentBox.innerHTML === content) return;
         $("form").fadeOut(200);
+        $("#content-grid").fadeOut(200);
         $("#content").fadeOut(200, function (){
             contentBox.innerHTML = content;
             $("#content").fadeIn(200);
-            if (form){
+            if (isForm){
                 $("form").fadeIn(200);
+            }
+            if (isHome){
+                $("#content-grid").fadeIn(200);
             }
         });
     });
