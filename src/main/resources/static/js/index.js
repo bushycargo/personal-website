@@ -1,6 +1,5 @@
 let nameScreenContent = `
     <header class="text js-h-text">Under Construction</header>
-    <p class="text js-p-text">Test</p>
 `;
 
 let contactContent = `<header class="text js-h-text">Contact Me</header>`;
